@@ -4,3 +4,8 @@ moira:
   name: Moira
   email: moira.sanna@europe.com
   password_digest: <%= User.digest('password') %>
+
+carla:
+  name: Carla
+  email: moira.sanna@gmail.com
+  password_digest: <%= User.digest('password') %>  
