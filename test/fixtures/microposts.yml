@@ -1,17 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 tea:
   content: "I drunk a cup of tea!"
   created_at: <%= 10.minutes.ago %>
+  user: moira
 
 this_site:
   content: "Check out my site https://glacial-savannah-95322.herokuapp.com/"
   created_at: <%= 3.months.ago %>
+  user: moira
 
 cat_video:
   content: "The laughing cat: https://www.youtube.com/watch?v=VT5xKrqgpj8"
   created_at: <%= 2.hours.ago %>
+  user: moira
 
 most_recent:
   content: "Writing a short test"
   created_at: <%= Time.zone.now %>
+  user: moira
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: moira
+<% end %>
